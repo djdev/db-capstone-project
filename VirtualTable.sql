@@ -2,7 +2,7 @@ USE LittleLemonDB;
 
 SELECT * FROM MenuItems;
 
-INSERT INTO MenuItems (MenuItemID, Name, Type, Price)
+/* INSERT INTO MenuItems (MenuItemID, Name, Type, Price)
 VALUES
 (1, 'Olives', 'Starters', 5),
 (2, 'Flatbread', 'Starters', 5),
@@ -20,7 +20,28 @@ VALUES
 (14, 'Corfu Red Wine', 'Drinks', 30),
 (15, 'Turkish Coffee', 'Drinks', 10),
 (16, 'Turkish Coffee', 'Drinks', 10),
-(17, 'Kabasa', 'Main Courses', 17);
+(17, 'Kabasa', 'Main Courses', 17); */
+
+INSERT INTO MenuItems (MenuItemID, CourseName, StarterName, DessertName)
+VALUES
+(1, 'Imam Bayildi', 'Horiatiki Salata', 'Baklava'),
+(2, 'Lamb Stifado', 'Halloumi Fries', 'Halvas'),
+(3, 'Giouvetsi With Lamb', 'Spanakopita', 'Karydopita'),
+(4, 'Moschari Lemonato', 'Greek Chicken Meatballs', 'Samali'),
+(5, 'Makaronia Me Kima', 'Tiropitakia', 'Galaktoboureko'),
+(6, 'Arakas Laderos Kokkinistos', 'Halloumi Kebabs', 'Loukoumades'),
+(7, 'Bacon Risotto', 'Potato Focaccia Rolls', 'Tiramisu'),
+(8, 'Sicilian-Style Swordfish', 'Pan-fried Scamorza', 'Panna Cotta'),
+(9, 'Spinach Ricotta Gnudi', 'Prosciutto Bruschetta', 'Espresso Martini'),
+(10, 'Beef Brasato', 'Antipasto Sandwiches', 'Mini Cannoli'),
+(11, 'Fish Artichoke Caponata', 'Fritto Misto', 'Bomboloni'),
+(12, 'Three-Cheese Lasagna', 'Carbonara Arancini', 'Biscotti'),
+(13, 'Mucver', 'Acili ezme', 'Sutlac'),
+(14, 'Mercimek Corbasi', 'Sigara Boregi', 'Incir Uyutmasi'),
+(15, 'Kuzu Tandir', 'Yaprak Sarmasi', 'Irmik Helvasi'),
+(16, 'Sis Kebabs', 'Kisir', 'Salep'),
+(17, 'Kofte', 'Gavurdagi Salatasi', 'Kunefe'),
+(18, 'Lahmacun', 'Imam Bayildi', 'Turkish Coffee');
 
 SELECT * FROM Menus;
 
@@ -42,17 +63,17 @@ VALUES
 SELECT * FROM Customers;
 
 INSERT INTO Customers
-VALUES 
-(1, 'Vanessa McCarthy', 757536378, 'vm@mangatagallo.com'), 
-(2, 'Marcos Romero', 757536379, 'mr@mangatagallo.com'), 
-(3, 'Hiroki Yamane', 757536376, 'hy@mangatagallo.com'), 
-(4, 'Anna Iversen', 757536375, 'ai@mangatagallo.com'), 
+VALUES
+(1, 'Vanessa McCarthy', 757536378, 'vm@mangatagallo.com'),
+(2, 'Marcos Romero', 757536379, 'mr@mangatagallo.com'),
+(3, 'Hiroki Yamane', 757536376, 'hy@mangatagallo.com'),
+(4, 'Anna Iversen', 757536375, 'ai@mangatagallo.com'),
 (5, 'Diana Pinto', 757536374, 'dp@mangatagallo.com'),
 (6, 'Joakim Iversen', 757536377, 'ji@mangatagallo.com');
 
 SELECT * FROM Roles;
 
-INSERT INTO Roles (RoleID, Title, AnnualSalary) 
+INSERT INTO Roles (RoleID, Title, AnnualSalary)
 VALUES
     (1, 'Manager', '$70,000'),
     (2, 'Receiptionist', '$35,000'),
@@ -110,4 +131,6 @@ WHERE Quantity >= 2;
 
 # Task 1
 SELECT * FROM OrdersView;
+
+
 
